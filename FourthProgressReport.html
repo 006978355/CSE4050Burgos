@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body	{
+ background-color: grey;
+}
+h1 {
+ color: lightgreen;
+ font-family: impact;
+ font-size: 300%;
+ border: 5px solid powderblue;
+ padding: 10px;
+}
+p {
+ color: lightpink;
+ font-family: bodoni;
+ font-size: 160%;
+}
+h2 {
+ color: lightgreen;
+ font-family: impact;
+ font-size: 300%;
+ border: 5px solid powderblue;
+ padding 10px;
+}
+p {
+ color: lightpink;
+ font-family: bodoni;
+ font-size: 160%;
+}
+h3 {
+ color: lightgreen;
+ font-family: impact;
+ font-size: 300%;
+ border: 5px solid powderblue;
+ padding 10px;
+}
+p {
+ color: lightpink;
+ font-family: bodoni;
+ font-size: 160%;
+}
+h4 {
+ color: lightgreen;
+ font-family: impact;
+ font-size: 300%;
+ border: 5px solid powderblue;
+ padding 10px;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<h1>Kelsey Burgos' First Webpage</h1>
+
+<p>This webpage is a demonstration of my understanding of html and css. I began with no knowledge of html. However, I was able to do some research and a website that really helped was w3schools. Here is the link: <a href="https://www.w3schools.com">Click on me!</a></p>
+
+<h2>How I got started</h2>
+
+<p id= "demo">Click on the button below to find out!</p>
+
+<button type="button" onclick='document.getElementById("demo").innerHTML = "I began to learn more about html and I discovered that CSS actually goes hand in hand with html. Html is better known as the blue print on everything that deals with making a webpage. Then once everything is built if you will, comes CSS. CSS can be compared to when a house is built it needs to be furnished. CSS is the furnishing, it adds beauty to the final product. Without CSS the webpage would look dull. Then once I understood everything I began to actually test some code out. After testing out different coding and different ways writing code, I came up with my final product. My final product is this webpage, which was a lot of fun to make quite honestly."'>Click Me!</button>
+
+<h3>Learning To Convert Objects into Strings Using JSON.stringify</h3>
+<p> This is useful and is very easy. If we have an object and we need to convert it to a string we would do the following. If for the object we have a car, let's say for example a car. The make is Honda, the model is Civic and the year is 2016. It would look something like this:</p>
+<p>var obj = { make: "Honda", model: "Civic", year: "2016"};</p> <p>This by itself will not work and it will need to be converted. We would do that by using JSON.stringfy() like so:</p> <p>var myTest = JSON.stringify(obj);</p> <p>There we have it! The object has been converted into a string and is now ready to be sent to the server.</p>
+
+<p id="start"></p>
+<h4>The End</h4>
+
+<p>I hope you have enjoyed my new and improved webpage! If so, click on the button below to give me a thumbs up! Thank you!</p>
+
+<button onclick="document.getElementById('myImage').src='file:///Users/kelseyburgos/Desktop/pic_thumbsdown.gif'">No Thumbs Up</button>
+
+<img id="myImage" src="file:///Users/kelseyburgos/Desktop/pic_thumbsdown.gif" style="width:300px">
+
+<button onclick="document.getElementById('myImage').src='file:///Users/kelseyburgos/Desktop/pic_thumbsup.gif'">Thumbs Up</button>
+
+<p id="begin"></p>
+
+
+<script>
+var obj1 = { make: "Honda", model: "civic", year: "2016" };
+var myJSON = JSON.stringify(obj1);
+document.getElementById("start").innerHTML = myJSON;
+
+var text = '{"name":"Fourth Progress Report", "created":"10-12-2020", "class":"CSE 4050"}';
+var obj = JSON.parse(text);
+obj.created = new Date(obj.created);
+document.getElementById("begin").innerHTML = obj.name + " modified on " + obj.created + " for " + obj.class;
+
+</script>
+
+
+</body>
+</html>
